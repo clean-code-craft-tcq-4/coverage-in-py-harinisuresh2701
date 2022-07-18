@@ -1,7 +1,7 @@
 import unittest
 import typewise_alert
 
-def print_message_on_console(message):
+def print_message_on_console_stub(message):
     print(message)  
     
 class TypewiseTest(unittest.TestCase):
@@ -25,5 +25,14 @@ class TypewiseTest(unittest.TestCase):
 
   def test_format_recepient(self):
     self.assertTrue(typewise_alert.format_recepient('test@trial.com') == "To: test@trial.com")
+    
+  def test_send_to_controller(self):
+    self.asserTrue(typewise_alert.send_to_controller('TOO_LOW',print_message_on_console_stub) == "0xfeed, TOO_LOW")
+  
+  def test_send_to_email(self):
+    recepient_message,breach_message_on_console = typewise_alert.send_to_email('TOO_HIGH', print_message_on_console_stub)
+    self.asserTrue(recepient_message == "To: a.b@c.com")
+    self.asserTrue(breach_message_on_console == "Hi, the temperature is too high")
+    
 if __name__ == '__main__':
   unittest.main()

@@ -33,15 +33,18 @@ def send_to_controller(breachType,print_message_on_console):
   header = 0xfeed
   controller_message = format_controller_message(header, breachType)
   print_message_on_console(controller_message)
+  return controller_message
     
 def send_to_email(breachType, print_message_on_console):
   recepient = "a.b@c.com"
   recepient_message = format_recepient(recepient)
   print_message_on_console(recepient_message)
   if breachType == 'TOO_LOW':    
-    print_message_on_console('Hi, the temperature is too low')
+    breach_message_on_console = 'Hi, the temperature is too low'
   elif breachType == 'TOO_HIGH':
-    print_message_on_console('Hi, the temperature is too high')
+    breach_message_on_console = 'Hi, the temperature is too high'
+  print_message_on_console(breach_message_on_console)
+  return recepient_message,breach_message_on_console
      
 def check_and_alert(alertTarget, coolingType, temperatureInC):
   breachType =\

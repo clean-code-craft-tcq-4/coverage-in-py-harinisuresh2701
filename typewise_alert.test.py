@@ -24,6 +24,6 @@ class TypewiseTest(unittest.TestCase):
         self.assertTrue(typewise_alert.format_controller_message(0xfeed, 'TOO_LOW') == "0xfeed, TOO_LOW")
 
   def test_format_recepient(self):
-    self.asserTrue(typewise_alert.format_recepient('test@trial.com') == "To: test@trial.com")
+    self.assertTrue(typewise_alert.format_recepient('test@trial.com') == "To: test@trial.com")
 if __name__ == '__main__':
   unittest.main()

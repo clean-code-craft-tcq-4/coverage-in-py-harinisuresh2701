@@ -1,7 +1,9 @@
 import unittest
 import typewise_alert
 
-
+def print_message_on_console(message):
+    print(message)  
+    
 class TypewiseTest(unittest.TestCase):
   def test_infers_breach_as_per_limits(self):
     cooling_type_object = typewise_alert.cooling_type(100, 50, 20)
@@ -17,6 +19,6 @@ class TypewiseTest(unittest.TestCase):
     self.assertTrue(typewise_alert.classify_temperature_breach('PASSIVE_COOLING',50) == 'TOO_HIGH')
     self.assertTrue(typewise_alert.classify_temperature_breach('HI_ACTIVE_COOLING',-5) == 'TOO_LOW')
     self.assertTrue(typewise_alert.classify_temperature_breach('MED_ACTIVE_COOLING', 100) == 'TOO_HIGH')
-
+          
 if __name__ == '__main__':
   unittest.main()

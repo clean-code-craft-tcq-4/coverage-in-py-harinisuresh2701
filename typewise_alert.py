@@ -18,22 +18,24 @@ def classify_temperature_breach(coolingType, temperatureInC):
     else:    
        return(cooling_type(temperatureInC,40,0).breach_type)
    
-def print_controller_message_on_console(header, breachType):
-    print(f'{header}, {breachType}')
+def format_controller_message(header, breachType):
+    formatted_string = (f'{header}, {breachType}')
   
-def print_recepient_on_console(recepient):
-    print(f'To: {recepient}')
+def format_recepient(recepient):
+    formatted_string = (f'To: {recepient}')
     
-def print_breach_message_on_console(message):
+def print_message_on_console(message):
     print(message)    
     
-def send_to_controller(breachType,print_controller_message):
+def send_to_controller(breachType,print_message_on_console):
   header = 0xfeed
-  print_controller_message(hex(header),breachType)
+  controller_message = format_controller_message(header, breachType)
+  print_message_on_console(controller_message)
     
-def send_to_email(breachType, print_recepient_on_console,print_breach_message_on_console):
+def send_to_email(breachType, print_message_on_console):
   recepient = "a.b@c.com"
-  print_recepient_on_console(recepient)
+  recepient_message = format_recepient(recepient)
+  print_message_on_console(recepient_message)
   if breachType == 'TOO_LOW':    
     print_breach_message_on_console('Hi, the temperature is too low')
   elif breachType == 'TOO_HIGH':

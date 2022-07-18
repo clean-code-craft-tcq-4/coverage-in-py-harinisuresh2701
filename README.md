@@ -46,10 +46,10 @@ You have seen a few workflows in this repository. They are quality-gates to prev
 
 During the next four weeks, what improvement do you plan in your code-quality practice? (in your regular work, not in this repository!):
 
-- 1.Avoid unnecessary nested if-else statements and hence reduce the cyclomatic complexity
-- 2.Keep the I/O operations away from the production code to ensure testability
-- 3.Keep in mind SRP(Single Responsibility Principle) principle while creating classes/functions
-- 4.Use Encapsulation, implement code reusability, and Abstraction while refactoring the code 
-- 5.Development of code keeping in mind its testability
-- 6.Ensure the code has optimum lines of code and lower cognitive complexity 
-- 7.Sensible and logical naming of variables, classes, and functions
+- Avoid unnecessary nested if-else statements and hence reduce the cyclomatic complexity
+- Keep the I/O operations away from the production code to ensure testability
+- Keep in mind SRP(Single Responsibility Principle) principle while creating classes/functions
+- Use Encapsulation, implement code reusability, and Abstraction while refactoring the code 
+- Development of code keeping in mind its testability
+- Ensure the code has optimum lines of code and lower cognitive complexity 
+- Sensible and logical naming of variables, classes, and functions

@@ -27,12 +27,12 @@ class TypewiseTest(unittest.TestCase):
     self.assertTrue(typewise_alert.format_recepient('test@trial.com') == "To: test@trial.com")
     
   def test_send_to_controller(self):
-    self.asserTrue(typewise_alert.send_to_controller('TOO_LOW',print_message_on_console_stub) == "0xfeed, TOO_LOW")
+    self.assertTrue(typewise_alert.send_to_controller('TOO_LOW',print_message_on_console_stub) == "0xfeed, TOO_LOW")
   
   def test_send_to_email(self):
     recepient_message,breach_message_on_console = typewise_alert.send_to_email('TOO_HIGH', print_message_on_console_stub)
-    self.asserTrue(recepient_message == "To: a.b@c.com")
-    self.asserTrue(breach_message_on_console == "Hi, the temperature is too high")
+    self.assertTrue(recepient_message == "To: a.b@c.com")
+    self.assertTrue(breach_message_on_console == "Hi, the temperature is too high")
     
 if __name__ == '__main__':
   unittest.main()

@@ -45,10 +45,10 @@ Think about guiding refactoring-work in your regular/project teams. Think of the
 You have seen a few workflows in this repository. They are quality-gates to prevent duplication, control complexity and prove functionality. Do you think some of them have potential to guide code-improvements in your team? **Yes!**
 
 During the next four weeks, what improvement do you plan in your code-quality practice? (in your regular work, not in this repository!)
-**-1.Avoid unnecessary nested if-else statements and hence reduce the cyclomatic complexity
+-1.Avoid unnecessary nested if-else statements and hence reduce the cyclomatic complexity
 -2.Keep the I/O operations away from the production code to ensure testability
 -3.Keep in mind SRP(Single Responsibility Principle) principle while creating classes/functions
 -4.Use Encapsulation, implement code reusability, and Abstraction while refactoring the code 
 -5.Development of code keeping in mind its testability
 -6.Ensure the code has optimum lines of code and lower cognitive complexity 
--7.Sensible and logical naming of variables, classes, and functions**
+-7.Sensible and logical naming of variables, classes, and functions

@@ -15,7 +15,7 @@ def classify_temperature_breach(coolingType, temperatureInC):
         return(cooling_type(temperatureInC,35,0).breach_type)
     elif coolingType == 'HI_ACTIVE_COOLING':
         return(cooling_type(temperatureInC,45,0).breach_type)
-    elif coolingType == 'MED_ACTIVE_COOLING':    
+    else:    
        return(cooling_type(temperatureInC,40,0).breach_type)
    
 def print_controller_message_on_console(header, breachType):

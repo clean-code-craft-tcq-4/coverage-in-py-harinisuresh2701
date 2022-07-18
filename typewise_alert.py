@@ -9,13 +9,13 @@ class cooling_type:
         self.breach_type = 'TOO_HIGH'
       else:
         self.breach_type = 'NORMAL'
-        
+
 def classify_temperature_breach(coolingType, temperatureInC):
     if coolingType == 'PASSIVE_COOLING':
         return(cooling_type(temperatureInC,35,0).breach_type)
-    if coolingType == 'HI_ACTIVE_COOLING':
+    elif coolingType == 'HI_ACTIVE_COOLING':
         return(cooling_type(temperatureInC,45,0).breach_type)
-    if coolingType == 'MED_ACTIVE_COOLING':    
+    else:    
        return(cooling_type(temperatureInC,40,0).breach_type)
    
 def print_controller_message_on_console(header, breachType):

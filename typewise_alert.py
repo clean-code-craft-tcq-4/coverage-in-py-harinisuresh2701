@@ -43,8 +43,6 @@ def send_to_email(breachType, print_message_on_console):
     breach_message_on_console = 'Hi, the temperature is too low'
   elif breachType == 'TOO_HIGH':
     breach_message_on_console = 'Hi, the temperature is too high'
-  else:
-    pass
   print_message_on_console(breach_message_on_console)
   return recepient_message,breach_message_on_console
      

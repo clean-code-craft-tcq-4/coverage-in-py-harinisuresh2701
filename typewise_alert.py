@@ -20,9 +20,11 @@ def classify_temperature_breach(coolingType, temperatureInC):
    
 def format_controller_message(header, breachType):
     formatted_string = (f'{header}, {breachType}')
+    return formatted_string
   
 def format_recepient(recepient):
     formatted_string = (f'To: {recepient}')
+    return formatted_string
     
 def print_message_on_console(message):
     print(message)    

@@ -19,6 +19,11 @@ class TypewiseTest(unittest.TestCase):
     self.assertTrue(typewise_alert.classify_temperature_breach('PASSIVE_COOLING',50) == 'TOO_HIGH')
     self.assertTrue(typewise_alert.classify_temperature_breach('HI_ACTIVE_COOLING',-5) == 'TOO_LOW')
     self.assertTrue(typewise_alert.classify_temperature_breach('MED_ACTIVE_COOLING', 100) == 'TOO_HIGH')
-          
+  
+  def test_format_controller_message(self):
+        self.assertTrue(typewise_alert.format_controller_message(0xfeed, 'TOO_LOW') == "0xfeed, TOO_LOW")
+
+  def test_format_recepient(self):
+    self.asserTrue(typewise_alert.format_recepient('test@trial.com') == "To: test@trial.com")
 if __name__ == '__main__':
   unittest.main()

@@ -44,7 +44,8 @@ class TypewiseTest(unittest.TestCase):
     
     breachType, controller_message = typewise_alert.check_and_alert('TO_EMAIL', "PASSIVE_COOLING", -5)    
     self.assertTrue(breachType == "TOO_LOW")
-    self.assertTrue(controller_message == "To: a.b@c.com")
+    self.assertTrue(controller_message[0] == "To: a.b@c.com")
+    self.assertTrue(controller_message[1] == "Hi, the temperature is too low")
     
 if __name__ == '__main__':
   unittest.main()

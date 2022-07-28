@@ -45,8 +45,8 @@ class TypewiseTest(unittest.TestCase):
     self.assertTrue(typewise_alert.send_to_controller('TOO_LOW',print_message_on_console_stub, header) == "0xfeed, TOO_LOW")
   
   def test_send_to_email(self):
-    recepient_message,breach_message_on_console = typewise_alert.send_to_email('TOO_HIGH', print_message_on_console_stub,recepient)
-    self.assertTrue(recepient_message == "To: a.b@c.com")
+    breachType,breach_message_on_console = typewise_alert.send_to_email('TOO_HIGH', print_message_on_console_stub,recepient)
+    self.assertTrue(breachType == "TOO_HIGH")
     self.assertTrue(breach_message_on_console == "Hi, the temperature is too high")
     
     recepient_message,breach_message_on_console = typewise_alert.send_to_email('TOO_LOW', print_message_on_console_stub,recepient)

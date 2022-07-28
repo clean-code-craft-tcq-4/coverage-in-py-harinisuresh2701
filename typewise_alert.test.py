@@ -1,6 +1,8 @@
 import unittest
 import typewise_alert
 
+recepient = "a.b@c.com"
+
 def print_message_on_console_stub(message):
     print(message)  
     

@@ -35,8 +35,7 @@ def send_to_controller(breachType,print_message_on_console):
   print_message_on_console(controller_message)
   return controller_message
     
-def send_to_email(breachType, print_message_on_console):
-  recepient = "a.b@c.com"
+def send_to_email(breachType, print_message_on_console,recepient):
   recepient_message = format_recepient(recepient)
   print_message_on_console(recepient_message)
   if breachType == 'TOO_LOW':    

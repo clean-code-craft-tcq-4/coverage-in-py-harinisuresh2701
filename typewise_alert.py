@@ -44,7 +44,7 @@ def send_to_email(breachType, print_message_on_console,recepient):
   print_message_on_console(breach_message_on_console)
   return recepient_message,breach_message_on_console
 
-def check_and_alert(coolingType, temperatureInC, classify_temperature_breach, send_to_controller_or_email,print_message_on_console):
+def check_and_alert(coolingType, temperatureInC, classify_temperature_breach, send_to_controller_or_email,print_message_on_console,recepient_or_header):
   breachType =\
     classify_temperature_breach(coolingType, temperatureInC)
-  send_to_controller_or_email(breachType,print_message_on_console)
+  send_to_controller_or_email(breachType,print_message_on_console,recepient_or_header)

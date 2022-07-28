@@ -10,7 +10,7 @@ def print_message_on_console_stub(message):
 def check_and_alert_stub(coolingType, temperatureInC, classify_temperature_breach, send_to_controller_or_email, print_message_on_console):
   breachType =\
     classify_temperature_breach(coolingType, temperatureInC)
-  output = send_to_controller_or_email(breachType,print_message_on_console)
+  output = send_to_controller_or_email(breachType,print_message_on_console, header_or_recepient)
   return output
 
 class TypewiseTest(unittest.TestCase):

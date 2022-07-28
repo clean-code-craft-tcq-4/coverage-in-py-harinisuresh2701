@@ -29,7 +29,7 @@ def format_recepient(recepient):
 def print_message_on_console(message):
     print(message)    
     
-def send_to_controller(breachType,print_message_on_console):
+def send_to_controller(breachType,print_message_on_console,header):
   controller_message = format_controller_message(header, breachType)
   print_message_on_console(controller_message)
   return controller_message

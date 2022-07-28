@@ -53,11 +53,11 @@ class TypewiseTest(unittest.TestCase):
     self.assertTrue(breach_message_on_console == "Hi, the temperature is too low")
     
   def test_check_and_alert(self):
-    breachType, controller_message = check_and_alert_stub("PASSIVE_COOLING", 45, typewise_alert.classify_temperature_breach, typewise_alert.send_to_controller)
+    breachType, controller_message = check_and_alert_stub("PASSIVE_COOLING", 45, typewise_alert.classify_temperature_breach, typewise_alert.send_to_controller, print_message_on_console_stub)
     self.assertTrue(breachType == "TOO_HIGH")
     self.assertTrue(controller_message == "0xfeed, TOO_HIGH")
     
-    breachType, controller_message = typewise_alert.check_and_alert("PASSIVE_COOLING", -5, typewise_alert.classify_temperature_breach, typewise_alert.send_to_email)    
+    breachType, controller_message = typewise_alert.check_and_alert("PASSIVE_COOLING", -5, typewise_alert.classify_temperature_breach, typewise_alert.send_to_email, print_message_on_console_stub)    
     self.assertTrue(breachType == "TOO_LOW")
     self.assertTrue(controller_message[0] == "To: a.b@c.com")
     self.assertTrue(controller_message[1] == "Hi, the temperature is too low")
